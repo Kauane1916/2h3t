@@ -24,3 +24,8 @@ button {
 #igual {
     background-color: tomato;
 }
+.entrada {
+    width: 36px;
+    border: none;
+    border-bottom: 2px solid rgb(191, 120, 248);
+}

@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+   --cor-fundo:rgb(197, 58, 135);
+   --cor-fonte: #640054;
+   --cor-hover: rgb(255, 89, 205);
+}
+a {
+ text-decoration-color: rgb(255, 96, 231);
+}
+ul{
+    list-style: none;
+}
+.header {
+    background-color: var(--cor-fundo);
+    position: sticky;
+    top: 0;
+    width: 100vw;
+}
+.logo {
+    display: inline-block;
+}
+#logo{
+    height: 16vh;
+    width: 10vw;
+}
+
+.nav{
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    background-color: var(--cor-fundo);
+    overflow: hidden;
+}
+.menu a {
+    display: block;
+    padding: 30px;
+    color: var(--cor-fonte);
+}
+.menu a:hover{
+    background-color: var(--cor-hover);
+}
+.nav {
+    max-height: 0;
+    transition: max-height  .5s ease-out; 
+}
+.hamb {
+    cursor: pointer;
+    float: right;
+    padding: 35px 20px;
+}
+.hamb-line{
+    background-color: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+.hamb-line::before,
+.hamb-line::after{
+    background-color: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transform: all  .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top:5px;
+}
+.hamb-line::after{
+    top:-5px;
+}
+.side-menu{
+    display: none;
+}
+ .side-menu:checked ~ nav {
+    max-height: 100%;
+
+ }
+.side-menu:checked ~ .hamb .hamb-line{
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after{
+    transform: rotate(45deg);
+    top:0;
+}
+.rodape{
+    text-align: center;
+}
+@media screen and (min-width: 820px){
+  .nav{
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .menu li{
+    float: left;
+  }
+  .menu a:houver{
+    background-color: transparent;
+  }    
+  .hamb{
+    display: none;
+  }
+  .menu li {
+    text-decoration: underline;
+  }
+}
+
+
+@media screen and (min-width: 1028px){
+   
+}
